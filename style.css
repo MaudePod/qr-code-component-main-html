@@ -1,0 +1,60 @@
+:root{
+    --slate-300:hsl(212, 45%, 89%);
+    --slate-500:hsl(216, 15%, 48%);
+    --slate-900:hsl(218, 44%, 22%);
+}
+@font-face {
+    font-family: 'Outfit';
+    src: url(./fonts/Outfit/Outfit-VariableFont_wght.ttf);
+}
+body{
+    margin: 0;
+    width: 100svw;
+    min-height: 100svh;
+    container: body / inline-size;
+    background: var(--slate-300);
+    font-family: 'Outfit';
+    font-size: 1em;
+}
+main{
+    display: grid;
+    place-items: center;
+    width:100cqw;
+    height:100cqh;
+    container: main / inline-size;
+}
+section[class="qr-card"]{
+    display: grid;
+    width: 576px;
+    grid-template-rows: 576px 250px;
+    text-align: center;
+    padding:15px;
+    border-radius: 15px;
+    background:white;
+    place-items: center;
+}
+section[class="qr-card-image"] img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+section[class="qr-card-body"]{
+    width: 80%;
+    font-weight: 500;
+    color:var(--slate-500);
+}
+section[class="qr-card-body"] h1{
+    font-size: 2.2em;
+    font-weight: 700;
+    color:var(--slate-900);
+}
+@container (inline-size <1000px){
+    section[class="qr-card"]{
+        width: 80cqw;
+    grid-template-rows: auto auto;
+
+    }
+    section[class="qr-card-body"] h1{
+        font-size: 1.4em;
+    }
+}
