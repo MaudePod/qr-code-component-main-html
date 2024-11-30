@@ -1,13 +1,15 @@
-:root{
-    --slate-300:hsl(212, 45%, 89%);
-    --slate-500:hsl(216, 15%, 48%);
-    --slate-900:hsl(218, 44%, 22%);
+:root {
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(218, 44%, 22%);
 }
+
 @font-face {
     font-family: 'Outfit';
     src: url(./fonts/Outfit/Outfit-VariableFont_wght.ttf);
 }
-body{
+
+body {
     margin: 0;
     width: 100svw;
     min-height: 100svh;
@@ -16,45 +18,54 @@ body{
     font-family: 'Outfit';
     font-size: 1em;
 }
-main{
+
+main {
     display: grid;
     place-items: center;
-    width:100cqw;
-    height:100cqh;
+    width: 100cqw;
+    max-width: 1440px;
+    height: 100cqh;
     container: main / inline-size;
+    margin: auto;
 }
-section[class="qr-card"]{
+
+section[class="qr-card"] {
     display: grid;
     width: 576px;
     grid-template-rows: 576px 250px;
     text-align: center;
-    padding:15px;
+    padding: 15px;
     border-radius: 15px;
-    background:white;
+    background: white;
     place-items: center;
 }
-section[class="qr-card-image"] img{
+
+section[class="qr-card-image"] img {
     width: 100%;
     height: 100%;
     border-radius: 15px;
 }
-section[class="qr-card-body"]{
+
+section[class="qr-card-body"] {
     width: 80%;
     font-weight: 500;
-    color:var(--slate-500);
+    color: var(--slate-500);
 }
-section[class="qr-card-body"] h1{
+
+section[class="qr-card-body"] h1 {
     font-size: 2.2em;
     font-weight: 700;
-    color:var(--slate-900);
+    color: var(--slate-900);
 }
-@container (inline-size <1000px){
-    section[class="qr-card"]{
+
+@container (inline-size <1000px) {
+    section[class="qr-card"] {
         width: 80cqw;
-    grid-template-rows: auto auto;
+        grid-template-rows: auto auto;
 
     }
-    section[class="qr-card-body"] h1{
+
+    section[class="qr-card-body"] h1 {
         font-size: 1.4em;
     }
 }
